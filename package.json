@@ -7,6 +7,6 @@
   ],
   "scripts": {
     "dev": "npm --workspace store run dev",
-    "build": "npm --workspace components run build && npm --workspace store run build"
+    "build": "npm --workspace component-library-package run build && npm --workspace store run build"
   }
 }
