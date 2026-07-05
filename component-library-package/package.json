@@ -25,5 +25,9 @@
     "ts-jest": "^29.4.11",
     "tsup": "^6.0.0",
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@mantine/core": "^7.17.8",
+    "@mantine/hooks": "^7.17.8"
   }
 }
