@@ -1,20 +1,29 @@
 # Store App
 
-This is the Vite React + TypeScript application that consumes the local component library package.
+A Vite + React + TypeScript application that consumes `@local/components` and fetches product data from the [Fake Store API](https://fakestoreapi.com).
 
 ## Development
 
-From the repository root:
-
 ```bash
+# Install dependencies
 npm install
+
+# Start the dev server
 npm run dev
 ```
-
-The app will start on the Vite default port (or the next available port if the default is busy).
 
 ## Build
 
 ```bash
 npm run build
 ```
+
+## Test
+
+```bash
+npm --workspace store run test
+```
+
+## API
+
+The `src/api/api.ts` file provides `getProducts()` and `getProductById(id)` which fetch from Fake Store API and return typed `Product` objects.

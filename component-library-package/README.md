@@ -1,25 +1,37 @@
 # Component Library Package
 
-This package contains a small React component library used by the Store app.
+A React component library built with `tsup` and styled with Mantine v7.
 
 ## Contents
 
-- `Button` component exported from the package entry point
-- Build output generated with `tsup`
+- `Button` — Mantine-based button component
+- `Providers` — Wraps children with `MantineProvider`, handles Mantine CSS
 
 ## Development
 
-From the repository root:
-
 ```bash
+# Install dependencies
 npm install
+
+# Build the library
 npm --workspace component-library-package run build
+
+# Run tests
+npm --workspace @local/components run test
 ```
 
 ## Usage
 
-Import the component from the package name:
+```tsx
+import { Button, Providers } from "@local/components";
 
-```ts
-import { Button } from "@local/components";
+function App() {
+  return (
+    <Providers>
+      <Button onClick={() => console.log("clicked")}>Click me</Button>
+    </Providers>
+  );
+}
 ```
+
+The `Providers` component is only needed once at the root of your application.
