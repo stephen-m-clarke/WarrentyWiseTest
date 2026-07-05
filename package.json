@@ -1,0 +1,12 @@
+{
+  "name": "warrentywise-test",
+  "private": true,
+  "workspaces": [
+    "component-library-package",
+    "store"
+  ],
+  "scripts": {
+    "dev": "npm --workspace store run dev",
+    "build": "npm --workspace components run build && npm --workspace store run build"
+  }
+}
