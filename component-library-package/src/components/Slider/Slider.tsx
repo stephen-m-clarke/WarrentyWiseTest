@@ -14,19 +14,10 @@ export interface SliderProps {
   value?: number;
   defaultValue?: number;
   onChange?: (value: number) => void;
-  onChangeEnd?: (value: number) => void;
   min?: number;
   max?: number;
   step?: number;
-  labelAlwaysOn?: boolean;
-  showLabelOnHover?: boolean;
   marks?: { value: number; label?: React.ReactNode }[];
-  disabled?: boolean;
-  color?: string;
-  size?: string | number;
-  precision?: number;
-  restrictToMarks?: boolean;
-  orientation?: "horizontal" | "vertical";
 }
 
 export const Slider: React.FC<SliderProps> = ({
