@@ -12,17 +12,13 @@ A React component library built with `tsup` and styled with Mantine v7.
 - `TextInput` — Text input component
 - `LibraryProvider` — Wraps children with `MantineProvider`, handles Mantine CSS
 
-## Development
+## Scripts
 
 ```bash
-# Install dependencies
-npm install
-
-# Build the library
-npm --workspace component-library-package run build
-
-# Run tests
-npm --workspace @local/components run test
+npm run build           # Build the library (tsup)
+npm test                # Run Jest tests
+npm run storybook       # Start Storybook dev server on port 6006
+npm run build-storybook # Build static Storybook site
 ```
 
 ## Usage

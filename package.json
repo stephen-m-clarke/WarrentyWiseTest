@@ -10,6 +10,8 @@
     "build": "npm --workspace component-library-package run build && npm --workspace store run build",
     "test": "npm --workspace @local/components run test && npm --workspace store run test",
     "test:components": "npm --workspace @local/components run test",
-    "test:store": "npm --workspace store run test"
+    "test:store": "npm --workspace store run test",
+    "storybook:components": "npm --workspace component-library-package run storybook",
+    "build-storybook": "npm --workspace component-library-package run build-storybook"
   }
 }

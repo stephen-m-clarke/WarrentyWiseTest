@@ -11,8 +11,8 @@ export const Header: React.FC<HeaderProps> = ({ children }) => {
       component="header"
       px="md"
       py="sm"
-      bg="var(--mantine-color-gray-0)"
-      style={{ borderBottom: "1px solid var(--mantine-color-gray-3)" }}
+      bg="var(--mantine-color-orange-4)"
+      // style={{ borderBottom: "1px solid var(--mantine-color-gray-3)" }}
     >
       {children}
     </Group>
