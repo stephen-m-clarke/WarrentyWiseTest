@@ -4,7 +4,7 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
 };
 
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: (query) => ({
     matches: false,
@@ -16,4 +16,14 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: () => {},
     dispatchEvent: () => {},
   }),
+});
+
+Object.defineProperty(global, "localStorage", {
+  value: {
+    getItem: vi.fn(),
+    setItem: vi.fn(),
+    removeItem: vi.fn(),
+    clear: vi.fn(),
+  },
+  writable: true,
 });
