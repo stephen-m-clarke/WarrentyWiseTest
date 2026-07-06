@@ -12,6 +12,8 @@
     "test:components": "npm --workspace @local/components run test",
     "test:store": "npm --workspace store run test",
     "storybook:components": "npm --workspace component-library-package run storybook",
-    "build-storybook": "npm --workspace component-library-package run build-storybook"
+    "build-storybook:components": "npm --workspace component-library-package run build-storybook",
+    "storybook:store": "npm --workspace store run storybook",
+    "build-storybook:store": "npm --workspace store run build-storybook"
   }
 }

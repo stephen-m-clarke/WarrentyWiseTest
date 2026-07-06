@@ -20,12 +20,16 @@ describe('TabGroup', () => {
         <Tabs.Panel value="tab2">Panel Two</Tabs.Panel>
       </TabGroup>,
     );
-    expect(screen.getByText('Tab One')).toBeInTheDocument();
-    expect(screen.getByText('Tab Two')).toBeInTheDocument();
+
+    const tabOne = screen.getByText('Tab One');
+    const tabTwo = screen.getByText('Tab Two');
+
+    expect(tabOne).toBeInTheDocument();
+    expect(tabTwo).toBeInTheDocument();
   });
 
   it('calls onChange when a tab is clicked', () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
     renderWithProvider(
       <TabGroup defaultValue="tab1" onChange={handleChange}>
         <Tabs.List>
@@ -34,7 +38,9 @@ describe('TabGroup', () => {
         </Tabs.List>
       </TabGroup>,
     );
+
     fireEvent.click(screen.getByText('Tab Two'));
+
     expect(handleChange).toHaveBeenCalledWith('tab2');
   });
 });

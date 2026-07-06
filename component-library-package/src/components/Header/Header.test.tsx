@@ -10,11 +10,17 @@ function renderWithProvider(ui: React.ReactElement) {
 describe('Header', () => {
   it('renders children', () => {
     renderWithProvider(<Header>My App</Header>);
-    expect(screen.getByText('My App')).toBeInTheDocument();
+
+    const element = screen.getByText('My App');
+
+    expect(element).toBeInTheDocument();
   });
 
   it('renders a header element', () => {
     renderWithProvider(<Header>Test</Header>);
-    expect(screen.getByText('Test').tagName).toBe('HEADER');
+
+    const element = screen.getByText('Test');
+
+    expect(element.tagName).toBe('HEADER');
   });
 });

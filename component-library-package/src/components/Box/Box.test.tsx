@@ -1,17 +1,17 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { MantineProvider } from '@mantine/core';
-import { Card } from './Card';
+import { Box } from './Box';
 
 function renderWithProvider(ui: React.ReactElement) {
   return render(<MantineProvider>{ui}</MantineProvider>);
 }
 
-describe('Card', () => {
+describe('Box', () => {
   it('renders children', () => {
-    renderWithProvider(<Card>Hello</Card>);
+    renderWithProvider(<Box>Content</Box>);
 
-    const element = screen.getByText('Hello');
+    const element = screen.getByText('Content');
 
     expect(element).toBeInTheDocument();
   });
