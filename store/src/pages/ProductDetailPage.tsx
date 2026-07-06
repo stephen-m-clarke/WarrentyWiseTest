@@ -40,7 +40,7 @@ const ProductDetailPage = () => {
         </Link>
       </Text>
 
-      <Flex gap={32} mt={16} wrap="wrap">
+      <Flex gap={32} mt={16} direction="column">
         <Flex align="center" justify="center" h={300} w={300}>
           <Image
             src={product.image}
