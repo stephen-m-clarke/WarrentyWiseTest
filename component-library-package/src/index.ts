@@ -3,7 +3,7 @@ export type { ButtonProps } from './components/Button/Button';
 export { Header } from './components/Header/Header';
 export type { HeaderProps } from './components/Header/Header';
 export { TabGroup } from './components/TabGroup/TabGroup';
-export type { TabGroupProps } from './components/TabGroup/TabGroup';
+export type { TabGroupProps, Tab } from './components/TabGroup/TabGroup';
 export { Card } from './components/Card/Card';
 export type { CardProps } from './components/Card/Card';
 export { SelectInput } from './components/SelectInput/SelectInput';
