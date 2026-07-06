@@ -1,5 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import { LibraryProvider } from "@local/components";
 import App from "./App";
 
@@ -7,8 +8,10 @@ const container = document.getElementById("root")!;
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
-    <LibraryProvider>
-      <App />
-    </LibraryProvider>
+    <BrowserRouter>
+      <LibraryProvider>
+        <App />
+      </LibraryProvider>
+    </BrowserRouter>
   </React.StrictMode>,
 );

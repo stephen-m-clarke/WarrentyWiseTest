@@ -8,6 +8,7 @@ export interface TextProps {
   c?: string;
   span?: boolean;
   lineClamp?: number;
+  tt?: string;
   p?: string | number;
   px?: string | number;
   py?: string | number;
@@ -20,7 +21,6 @@ export interface TextProps {
   mb?: string | number;
   ml?: string | number;
   mr?: string | number;
-  style?: React.CSSProperties;
 }
 
 export const Text: React.FC<TextProps> = (props) => {
