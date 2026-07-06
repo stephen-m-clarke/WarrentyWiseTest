@@ -22,4 +22,6 @@ npm test                # Run all workspace tests
 npm run test:components # Run component library tests only
 npm run test:store      # Run store app tests only
 npm run dev             # Start the store dev server
+npm run storybook       # Start Storybook for component library (port 6006)
+npm run build-storybook # Build static Storybook site
 ```
