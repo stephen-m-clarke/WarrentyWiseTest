@@ -8,7 +8,7 @@ const mockProduct: Product = {
   price: 109.95,
   description: 'Your perfect pack for everyday use.',
   category: "men's clothing",
-  image: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
+  image: '/Test-Logo.svg.webp',
   rating: { rate: 3.5, count: 120 },
 };
 

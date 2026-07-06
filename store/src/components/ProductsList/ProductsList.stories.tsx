@@ -9,7 +9,7 @@ const mockProducts: Product[] = [
     price: 109.95,
     description: 'Your perfect pack for everyday use.',
     category: "men's clothing",
-    image: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
+    image: '/Test-Logo.svg.webp',
     rating: { rate: 3.5, count: 120 },
   },
   {
@@ -18,7 +18,7 @@ const mockProducts: Product[] = [
     price: 22.3,
     description: 'Slim-fitting style.',
     category: "men's clothing",
-    image: 'https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg',
+    image: '/Test-Logo.svg.webp',
     rating: { rate: 4.1, count: 259 },
   },
 ];
