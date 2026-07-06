@@ -1,13 +1,16 @@
 import React from 'react';
 import type { Preview } from '@storybook/react-vite';
+import { MemoryRouter } from 'react-router-dom';
 import { LibraryProvider } from '@local/components';
 
 const preview: Preview = {
   decorators: [
     (Story) => (
-      <LibraryProvider>
-        <Story />
-      </LibraryProvider>
+      <MemoryRouter>
+        <LibraryProvider>
+          <Story />
+        </LibraryProvider>
+      </MemoryRouter>
     ),
   ],
   parameters: {

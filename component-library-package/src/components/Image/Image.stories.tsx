@@ -11,7 +11,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    src: 'https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg',
+    src: '/Test-Logo.svg.webp',
     alt: 'Product image',
     fit: 'contain',
     h: 200,
