@@ -5,7 +5,12 @@ A React component library built with `tsup` and styled with Mantine v7.
 ## Contents
 
 - `Button` — Mantine-based button component
-- `Providers` — Wraps children with `MantineProvider`, handles Mantine CSS
+- `Header` — Header layout component
+- `TabGroup` — Tabs component
+- `Card` — Card component with shadow and radius
+- `SelectInput` — Select dropdown component
+- `TextInput` — Text input component
+- `LibraryProvider` — Wraps children with `MantineProvider`, handles Mantine CSS
 
 ## Development
 
