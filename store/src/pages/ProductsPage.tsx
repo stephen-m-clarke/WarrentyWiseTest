@@ -14,6 +14,7 @@ const CATEGORY_LABELS: Record<string, string> = {
 
 // TODO: Add e2e tests for the products page
 // TODO: Remember the selected tab when navigating back from ProductDetailPage (e.g. URL search params or session storage)
+// TODO: Review and improve the tab labels for mobile resolutions
 const ProductsPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
@@ -91,10 +92,10 @@ const ProductsPage = () => {
       {error && <Text c="red">{error}</Text>}
       {!loading && !error && (
         <>
-          <Flex gap="md" align="flex-start" mb="md">
+          <Flex gap="md" align="flex-start" mb="md" wrap="wrap">
             <TextInput
               label="Search"
-              placeholder="Search products..."
+              placeholder="Search products"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.currentTarget.value)}
             />

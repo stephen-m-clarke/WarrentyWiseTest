@@ -8,7 +8,7 @@ export interface PageContentProps {
 
 export const PageContent: React.FC<PageContentProps> = ({ children }) => {
   return (
-    <Box px={64} py="lg" maw={CONTENT_MAX_WIDTH} mx="auto" ff="sans-serif">
+    <Box px={32} py="lg" maw={CONTENT_MAX_WIDTH} mx="auto" ff="sans-serif">
       {children}
     </Box>
   );
