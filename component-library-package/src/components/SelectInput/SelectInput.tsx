@@ -10,7 +10,7 @@ export interface SelectInputProps {
 }
 
 export const SelectInput: React.FC<SelectInputProps> = (props) => {
-  return <Select {...props} />;
+  return <Select miw={200} {...props} />;
 };
 
 export default SelectInput;
