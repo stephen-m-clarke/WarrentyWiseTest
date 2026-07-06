@@ -1,4 +1,4 @@
-export { Button } from './Button';
-export type { ButtonProps } from './Button';
-export { Providers } from './Providers';
-export type { ProvidersProps } from './Providers';
+export { Button } from './components/Button/Button';
+export type { ButtonProps } from './components/Button/Button';
+export { LibraryProvider } from './components/LibraryProvider/LibraryProvider';
+export type { LibraryProviderProps } from './components/LibraryProvider/LibraryProvider';

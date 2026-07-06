@@ -23,15 +23,14 @@ npm --workspace @local/components run test
 ## Usage
 
 ```tsx
-import { Button, Providers } from "@local/components";
+import { Button, LibraryProvider } from "@local/components";
 
 function App() {
   return (
-    <Providers>
+    <LibraryProvider>
       <Button onClick={() => console.log("clicked")}>Click me</Button>
-    </Providers>
+    </LibraryProvider>
   );
 }
-```
 
-The `Providers` component is only needed once at the root of your application.
+The `LibraryProvider` component is only needed once at the root of your application.
