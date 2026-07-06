@@ -10,18 +10,26 @@ function renderWithProvider(ui: React.ReactElement) {
 describe('TextInput', () => {
   it('renders label', () => {
     renderWithProvider(<TextInput label="Name" />);
-    expect(screen.getByLabelText('Name')).toBeInTheDocument();
+
+    const input = screen.getByLabelText('Name');
+
+    expect(input).toBeInTheDocument();
   });
 
   it('accepts input value', () => {
     renderWithProvider(<TextInput label="Name" value="John" readOnly />);
-    expect(screen.getByLabelText('Name')).toHaveValue('John');
+
+    const input = screen.getByLabelText('Name');
+
+    expect(input).toHaveValue('John');
   });
 
   it('calls onChange when value changes', () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
     renderWithProvider(<TextInput label="Name" onChange={handleChange} />);
+
     fireEvent.change(screen.getByLabelText('Name'), { target: { value: 'John' } });
+
     expect(handleChange).toHaveBeenCalledTimes(1);
   });
 });

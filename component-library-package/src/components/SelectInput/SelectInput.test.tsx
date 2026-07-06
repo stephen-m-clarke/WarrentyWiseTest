@@ -10,19 +10,28 @@ function renderWithProvider(ui: React.ReactElement) {
 describe('SelectInput', () => {
   it('renders label', () => {
     renderWithProvider(<SelectInput label="Choose" data={['A', 'B']} />);
-    expect(screen.getByText('Choose')).toBeInTheDocument();
+
+    const label = screen.getByText('Choose');
+
+    expect(label).toBeInTheDocument();
   });
 
   it('renders options', () => {
     renderWithProvider(<SelectInput label="Choose" data={['A', 'B']} />);
-    expect(screen.getByText('A')).toBeInTheDocument();
-    expect(screen.getByText('B')).toBeInTheDocument();
+
+    const optionA = screen.getByText('A');
+    const optionB = screen.getByText('B');
+
+    expect(optionA).toBeInTheDocument();
+    expect(optionB).toBeInTheDocument();
   });
 
   it('calls onChange when an option is selected', () => {
-    const handleChange = jest.fn();
+    const handleChange = vi.fn();
     renderWithProvider(<SelectInput label="Choose" data={['A', 'B']} onChange={handleChange} />);
+
     fireEvent.click(screen.getByText('A'));
+
     expect(handleChange).toHaveBeenCalledWith('A', { label: 'A', value: 'A' });
   });
 });

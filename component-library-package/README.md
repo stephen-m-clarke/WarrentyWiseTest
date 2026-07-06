@@ -16,10 +16,16 @@ A React component library built with `tsup` and styled with Mantine v7.
 
 ```bash
 npm run build           # Build the library (tsup)
-npm test                # Run Jest tests
+npm test                # Run tests with Vitest
 npm run storybook       # Start Storybook dev server on port 6006
 npm run build-storybook # Build static Storybook site
 ```
+
+## Testing
+
+Tests use **Vitest** (not Jest). Vitest's API mirrors Jest closely — `describe`, `it`, `expect` work identically. The main difference is using `vi.fn()` instead of `jest.fn()` for mock functions. Vitest runs faster and integrates natively with Vite/tsup.
+
+Tests follow the **Arrange-Act-Assert (AAA)** pattern — each test clearly separates setup (Arrange), the action being tested (Act), and the expected outcome (Assert).
 
 ## Usage
 

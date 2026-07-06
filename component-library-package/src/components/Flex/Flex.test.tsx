@@ -1,15 +1,15 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { MantineProvider } from '@mantine/core';
-import { Card } from './Card';
+import { Flex } from './Flex';
 
 function renderWithProvider(ui: React.ReactElement) {
   return render(<MantineProvider>{ui}</MantineProvider>);
 }
 
-describe('Card', () => {
+describe('Flex', () => {
   it('renders children', () => {
-    renderWithProvider(<Card>Hello</Card>);
+    renderWithProvider(<Flex><div>Hello</div></Flex>);
 
     const element = screen.getByText('Hello');
 

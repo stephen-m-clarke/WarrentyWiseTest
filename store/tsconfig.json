@@ -2,7 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "types": ["jest", "vite/client"],
+    "types": ["vitest/globals", "vite/client"],
     "baseUrl": ".",
     "paths": {
       "@local/components": ["../component-library-package/src"]
