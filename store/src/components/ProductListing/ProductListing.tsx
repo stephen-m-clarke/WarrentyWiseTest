@@ -13,7 +13,7 @@ export const ProductListing: React.FC<ProductListingProps> = ({ product }) => {
     <div>
       <ProductListingImage src={product.image} alt={product.title} />
       <div>
-        <Text size="sm" fw={600} lineClamp={2} mb={8}>
+        <Text size="sm" fw={600} lineClamp={1} mb={8}>
           {product.title}
         </Text>
         <Flex align="center" gap={10} mt={8}>
