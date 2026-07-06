@@ -20,5 +20,7 @@ export { Box } from './components/Box/Box';
 export type { BoxProps } from './components/Box/Box';
 export { Image } from './components/Image/Image';
 export type { ImageProps } from './components/Image/Image';
+export { Link } from './components/Link/Link';
+export type { LinkProps } from './components/Link/Link';
 export { LibraryProvider } from './components/LibraryProvider/LibraryProvider';
 export type { LibraryProviderProps } from './components/LibraryProvider/LibraryProvider';

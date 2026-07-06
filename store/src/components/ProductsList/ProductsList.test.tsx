@@ -1,11 +1,16 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import { MantineProvider } from '@mantine/core';
 import { ProductsList } from './ProductsList';
 import type { Product } from '../../interfaces/Product';
 
 function renderWithProvider(ui: React.ReactElement) {
-  return render(<MantineProvider>{ui}</MantineProvider>);
+  return render(
+    <MemoryRouter>
+      <MantineProvider>{ui}</MantineProvider>
+    </MemoryRouter>,
+  );
 }
 
 const mockProducts: Product[] = [
