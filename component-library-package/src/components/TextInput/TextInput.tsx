@@ -10,7 +10,7 @@ export interface TextInputProps {
 }
 
 export const TextInput: React.FC<TextInputProps> = (props) => {
-  return <MantineTextInput {...props} />;
+  return <MantineTextInput miw={200} {...props} />;
 };
 
 export default TextInput;

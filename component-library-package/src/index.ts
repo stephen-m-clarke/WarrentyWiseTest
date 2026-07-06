@@ -22,5 +22,7 @@ export { Image } from './components/Image/Image';
 export type { ImageProps } from './components/Image/Image';
 export { Link } from './components/Link/Link';
 export type { LinkProps } from './components/Link/Link';
+export { Slider } from './components/Slider/Slider';
+export type { SliderProps } from './components/Slider/Slider';
 export { LibraryProvider } from './components/LibraryProvider/LibraryProvider';
 export type { LibraryProviderProps } from './components/LibraryProvider/LibraryProvider';
