@@ -15,7 +15,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@mantine/core": "^9.4.1"
+    "@mantine/core": "^9.4.1",
+    "@mantine/hooks": "^9.4.1"
   },
   "devDependencies": {
     "react": "^19.2.7",
