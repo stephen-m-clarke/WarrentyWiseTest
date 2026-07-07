@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen, act } from "@testing-library/react";
 import { LibraryProvider } from "@local/components";
-import { MemoryRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router";
 import ProductDetailPage from "./ProductDetailPage";
 import { getProductById } from "../api/api";
 import { Product } from "../interfaces/Product";

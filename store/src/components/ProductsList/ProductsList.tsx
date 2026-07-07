@@ -1,5 +1,5 @@
 import React from "react";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink } from "react-router";
 import { SimpleGrid, Link } from "@local/components";
 import { ProductListing } from "../ProductListing/ProductListing";
 import { Product } from "../../interfaces/Product";

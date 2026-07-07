@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router';
 import { LibraryProvider } from '@local/components';
 import { ProductsList } from './ProductsList';
 import type { Product } from '../../interfaces/Product';
