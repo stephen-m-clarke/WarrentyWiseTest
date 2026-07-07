@@ -2,10 +2,10 @@
 
 Monorepo (npm workspaces) with two packages:
 
-| Package | Path | Description |
-|---------|------|-------------|
+| Package             | Path                         | Description                                                 |
+| ------------------- | ---------------------------- | ----------------------------------------------------------- |
 | `@local/components` | `component-library-package/` | React component library built with `tsup`, using Mantine v9 |
-| `store` | `store/` | Vite + React + TypeScript app consuming `@local/components` |
+| `store`             | `store/`                     | Vite + React + TypeScript app consuming `@local/components` |
 
 ## Quick Start
 
@@ -61,7 +61,7 @@ Because of the source alias, the store runs against the library's **live TypeScr
 
 ## Storybook
 
-Both packages run their own Storybook instance on **port 6006**, so they cannot run simultaneously on the same port. Each package has its own `.storybook/` config and builds its own static site into `storybook-static/`. (The root `.storybook/` directory exists but is empty.)
+Both packages run their own Storybook instance on **port 6006**, so they cannot run simultaneously on the same port. Each package has its own `.storybook/` config and builds its own static site into `storybook-static/`.
 
 ## CI
 
@@ -79,6 +79,7 @@ npm run build
 Both packages use **Vitest** instead of Jest. The API is nearly identical — `describe`, `it`, `expect` work the same way. The main difference is using `vi.fn()` instead of `jest.fn()` and `vi.resetAllMocks()` instead of `jest.resetAllMocks()`.
 
 Tests follow the **Arrange-Act-Assert (AAA)** pattern:
+
 - **Arrange** — set up the component, mocks, or data needed for the test
 - **Act** — perform the action being tested (render, click, change, etc.)
 - **Assert** — verify the expected outcome
