@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "npm --workspace store run dev",
     "build": "npm --workspace component-library-package run build && npm --workspace store run build",
+    "typecheck": "npm --workspace component-library-package run typecheck && npm --workspace store run typecheck",
     "test": "npm --workspace @local/components run test && npm --workspace store run test",
     "test:components": "npm --workspace @local/components run test",
     "test:store": "npm --workspace store run test",

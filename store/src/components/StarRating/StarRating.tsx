@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Text } from "@local/components";
+import { COLORS } from "../../variables";
 
 export interface StarRatingProps {
   rate: number;
@@ -13,7 +14,7 @@ export const StarRating: React.FC<StarRatingProps> = ({ rate }) => {
       <Text
         key={i}
         span
-        c={i <= full ? "#f59f00" : "#dee2e6"}
+        c={i <= full ? COLORS.starFilled : COLORS.starEmpty}
         size="sm"
       >
         ★
@@ -22,7 +23,7 @@ export const StarRating: React.FC<StarRatingProps> = ({ rate }) => {
   }
   return (
     <Flex align="center" gap={2}>
-      <Text span c="#868e96" size="xs">{rate}</Text>
+      <Text span c={COLORS.textMuted} size="xs">{rate}</Text>
       <span>{stars}</span>
     </Flex>
   );

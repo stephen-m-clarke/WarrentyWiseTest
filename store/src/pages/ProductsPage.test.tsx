@@ -4,7 +4,7 @@ import { LibraryProvider } from "@local/components";
 import { MemoryRouter } from "react-router-dom";
 import ProductsPage from "./ProductsPage";
 import { getProducts } from "../api/api";
-import { Product } from "src/interfaces/Product";
+import { Product } from "../interfaces/Product";
 
 vi.mock("../api/api");
 

@@ -4,6 +4,7 @@ import { Box, Flex, Image, Text, Link } from "@local/components";
 import { StarRating } from "../components/StarRating/StarRating";
 import { Product } from "../interfaces/Product";
 import { getProductById } from "../api/api";
+import { COLORS } from "../variables";
 
 // TODO: Add e2e tests for the product detail page
 const ProductDetailPage = () => {
@@ -60,14 +61,14 @@ const ProductDetailPage = () => {
           </Text>
           <Flex align="center" gap={8} mb={16}>
             <StarRating rate={product.rating.rate} />
-            <Text span size="sm" c="#868e96">
+             <Text span size="sm" c={COLORS.textMuted}>
               ({product.rating.count} reviews)
             </Text>
           </Flex>
-          <Text size="sm" c="#555">
+           <Text size="sm" c={COLORS.textSecondary}>
             {product.description}
           </Text>
-          <Text size="xs" c="#adb5bd" mt={12} tt="capitalize">
+           <Text size="xs" c={COLORS.textTertiary} mt={12} tt="capitalize">
             {product.category}
           </Text>
         </Flex>
