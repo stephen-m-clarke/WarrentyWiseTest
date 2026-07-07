@@ -47,6 +47,7 @@ const ProductsPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMaxPrice(maxProductPrice);
   }, [maxProductPrice]);
 
