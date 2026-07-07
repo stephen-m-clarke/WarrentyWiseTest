@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen, act } from "@testing-library/react";
-import { MantineProvider } from "@mantine/core";
+import { LibraryProvider } from "@local/components";
 import { MemoryRouter } from "react-router-dom";
 import ProductsPage from "./ProductsPage";
 import { getProducts } from "../api/api";
@@ -41,9 +41,9 @@ const mockProducts: Product[] = [
 async function renderWithRouter(ui: React.ReactElement) {
   await act(async () => {
     return render(
-      <MantineProvider>
+      <LibraryProvider>
         <MemoryRouter>{ui}</MemoryRouter>
-      </MantineProvider>,
+      </LibraryProvider>,
     );
   });
 }

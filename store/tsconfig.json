@@ -3,11 +3,9 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "types": ["vitest/globals", "vite/client"],
-    "baseUrl": ".",
     "paths": {
       "@local/components": ["../component-library-package/src"]
-    },
-    "ignoreDeprecations": "6.0"
+    }
   },
   "include": ["src"]
 }
