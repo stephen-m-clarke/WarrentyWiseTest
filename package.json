@@ -14,6 +14,16 @@
     "storybook:components": "npm --workspace component-library-package run storybook",
     "build-storybook:components": "npm --workspace component-library-package run build-storybook",
     "storybook:store": "npm --workspace store run storybook",
-    "build-storybook:store": "npm --workspace store run build-storybook"
+    "build-storybook:store": "npm --workspace store run build-storybook",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.63.0",
+    "@typescript-eslint/parser": "^8.63.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0"
   }
 }
