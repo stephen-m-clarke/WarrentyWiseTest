@@ -2,6 +2,8 @@ import React from "react";
 import { Flex, Text } from "@local/components";
 import { COLORS } from "../../variables";
 
+// TODO: Implement an icon library to use instead of unicode star symbols
+
 export interface StarRatingProps {
   rate: number;
 }
