@@ -22,6 +22,8 @@ npm test                # Run all workspace tests (vitest)
 npm run test:components # Run component library tests only (vitest)
 npm run test:store      # Run store app tests only (vitest)
 npm run dev             # Start the store dev server
+npm run lint               # Lint all TypeScript files
+npm run lint:fix           # Lint and auto-fix issues
 npm run storybook:components       # Start Storybook for component library (port 6006)
 npm run storybook:store            # Start Storybook for store app (port 6006)
 npm run build-storybook:components # Build static Storybook site (library)

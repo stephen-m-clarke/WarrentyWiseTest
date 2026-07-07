@@ -1,10 +1,11 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { Anchor } from "@mantine/core";
 
 export interface LinkProps {
   children?: React.ReactNode;
   to: string;
-  component?: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  component?: FunctionComponent<any>;
   underline?: "hover" | "always" | "never";
   size?: "xs" | "sm" | "md" | "lg" | "xl";
   fw?: number | "normal" | "bold" | "bolder" | "lighter";
@@ -18,7 +19,12 @@ export interface LinkProps {
   style?: React.CSSProperties;
 }
 
-export const Link: React.FC<LinkProps> = ({ to, component, children, ...others }) => {
+export const Link: React.FC<LinkProps> = ({
+  to,
+  component,
+  children,
+  ...others
+}) => {
   if (component) {
     return (
       <Anchor component={component} to={to} {...others}>
