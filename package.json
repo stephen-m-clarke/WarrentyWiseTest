@@ -18,6 +18,17 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
+  "overrides": {
+    "eslint-plugin-jsx-a11y": {
+      "eslint": "$eslint"
+    },
+    "eslint-plugin-react": {
+      "eslint": "$eslint"
+    },
+    "eslint-plugin-react-hooks": {
+      "eslint": "$eslint"
+    }
+  },
   "devDependencies": {
     "@chromatic-com/storybook": "^5.2.1",
     "@eslint/compat": "^2.1.0",
