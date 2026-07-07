@@ -1,15 +1,13 @@
 import { defineConfig } from 'vitest/config';
-import path from 'path';
+import { localComponentsAlias } from '../config/aliases';
 
 export default defineConfig({
   resolve: {
-    alias: {
-      '@local/components': path.resolve(__dirname, '../component-library-package/src'),
-    },
+    alias: localComponentsAlias,
   },
   test: {
     environment: 'jsdom',
     globals: true,
-    setupFiles: ['./vitest.setup.js'],
+    setupFiles: ['./../config/vitest.setup.js'],
   },
 });

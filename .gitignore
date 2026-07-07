@@ -8,4 +8,5 @@ npm-debug.log*
 *.log
 
 *storybook.log
+debug-storybook.log
 storybook-static
