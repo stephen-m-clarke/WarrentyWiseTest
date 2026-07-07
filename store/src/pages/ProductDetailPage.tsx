@@ -7,6 +7,7 @@ import { getProductById } from "../api/api";
 import { COLORS } from "../variables";
 
 // TODO: Add e2e tests for the product detail page
+// TODO: Implement an icon library to use instead of a unicode back arrow symbol
 const ProductDetailPage = () => {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
@@ -61,14 +62,14 @@ const ProductDetailPage = () => {
           </Text>
           <Flex align="center" gap={8} mb={16}>
             <StarRating rate={product.rating.rate} />
-             <Text span size="sm" c={COLORS.textMuted}>
+            <Text span size="sm" c={COLORS.textMuted}>
               ({product.rating.count} reviews)
             </Text>
           </Flex>
-           <Text size="sm" c={COLORS.textSecondary}>
+          <Text size="sm" c={COLORS.textSecondary}>
             {product.description}
           </Text>
-           <Text size="xs" c={COLORS.textTertiary} mt={12} tt="capitalize">
+          <Text size="xs" c={COLORS.textTertiary} mt={12} tt="capitalize">
             {product.category}
           </Text>
         </Flex>
