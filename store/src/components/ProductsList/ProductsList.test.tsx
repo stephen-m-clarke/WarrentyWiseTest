@@ -1,14 +1,14 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import { MantineProvider } from '@mantine/core';
+import { LibraryProvider } from '@local/components';
 import { ProductsList } from './ProductsList';
 import type { Product } from '../../interfaces/Product';
 
 function renderWithProvider(ui: React.ReactElement) {
   return render(
     <MemoryRouter>
-      <MantineProvider>{ui}</MantineProvider>
+      <LibraryProvider>{ui}</LibraryProvider>
     </MemoryRouter>,
   );
 }

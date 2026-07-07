@@ -1,10 +1,10 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import { MantineProvider } from '@mantine/core';
+import { LibraryProvider } from '@local/components';
 import { AppHeader } from './AppHeader';
 
 function renderWithProvider(ui: React.ReactElement) {
-  return render(<MantineProvider>{ui}</MantineProvider>);
+  return render(<LibraryProvider>{ui}</LibraryProvider>);
 }
 
 describe('AppHeader', () => {
