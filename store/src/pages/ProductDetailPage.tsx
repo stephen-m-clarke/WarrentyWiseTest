@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link as RouterLink } from "react-router-dom";
+import { useParams, Link as RouterLink } from "react-router";
 import { Box, Flex, Image, Text, Link } from "@local/components";
 import { StarRating } from "../components/StarRating/StarRating";
 import { Product } from "../interfaces/Product";
