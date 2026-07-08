@@ -24,7 +24,7 @@ npm run test:store      # Run store app tests only (vitest)
 npm run dev             # Start the store dev server
 npm run lint               # Lint all TypeScript files
 npm run lint:fix           # Lint and auto-fix issues
-npm run storybook:components       # Start Storybook for component library (port 6006)
+npm run storybook:components       # Start Storybook for component library (port 6007)
 npm run storybook:store            # Start Storybook for store app (port 6006)
 npm run build-storybook:components # Build static Storybook site (library)
 npm run build-storybook:store      # Build static Storybook site (store)
@@ -60,17 +60,20 @@ Because of the source alias, the store runs against the library's **live TypeScr
 
 ## Storybook
 
-Both packages run their own Storybook instance on **port 6006**, so they cannot run simultaneously on the same port. Each package has its own `.storybook/` config and builds its own static site into `storybook-static/`.
+Each package runs its own Storybook instance on separate ports (component library on **6007**, store on **6006**), so they can run simultaneously. Each package has its own `.storybook/` config and builds its own static site into `storybook-static/`.
 
 ## CI
 
-`.github/workflows/ci.yml` runs on every push and pull request to `main` (Ubuntu, Node 20):
+`.github/workflows/ci.yml` runs on every push and pull request to `main` (Ubuntu, Node 20). The six jobs — **lint**, **typecheck**, **test**, **build**, **storybook-components**, and **storybook-store** — all run concurrently:
 
 ```bash
 npm ci
 npm run lint
+npm run typecheck
 npm test
 npm run build
+npm run build-storybook:components
+npm run build-storybook:store
 ```
 
 ## Testing
