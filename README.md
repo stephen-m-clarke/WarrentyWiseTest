@@ -34,8 +34,7 @@ npm run build-storybook:store      # Build static Storybook site (store)
 
 `@local/components` is consumed by `store` through **two complementary mechanisms**:
 
-1. **npm workspace symlink** — `npm install` (or `npm ci`) creates a junction at `node_modules/@local/components` → `component-library-package/`.
-2. **Vite/Vitest source alias** — `config/aliases.ts` maps `@local/components` directly to `component-library-package/src`.
+1. **Vite/Vitest source alias** — `config/aliases.ts` maps `@local/components` directly to `component-library-package/src`.
 
 Because of the source alias, the store runs against the library's **live TypeScript source**, so you do **not** need to build the library before running the store's dev server, tests, or Storybook.
 
