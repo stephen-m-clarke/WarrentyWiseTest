@@ -37,17 +37,12 @@ import "@mantine/core/styles.css";
 
 The library is built with `tsup` (`tsup.config.ts`), entry `src/index.ts`:
 
-- `dist/index.js` — CommonJS build
-- `dist/index.mjs` — ESM build
-- `dist/index.d.ts` — TypeScript types (CJS)
-- `dist/index.d.mts` — TypeScript types (ESM)
-
 ## Scripts
 
 ```bash
 npm run build           # Build the library (tsup)
 npm test                # Run tests with Vitest
-npm run storybook       # Start Storybook dev server on port 6006
+npm run storybook       # Start Storybook dev server on port 6007
 npm run build-storybook # Build static Storybook site
 ```
 
